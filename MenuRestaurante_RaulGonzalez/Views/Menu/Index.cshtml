@@ -21,21 +21,29 @@
                 }
 
                 <div class="card-body">
+                    @if (item.IsFeatured)
+                    {
+                        <span class="badge bg-warning text-dark mb-2">
+                            <i class="bi bi-star-fill me-1"></i>Destacado
+                        </span>
+                    }
+
                     <h5 class="card-title fw-bold fs-5">@item.Name</h5>
                     <p class="card-text text-muted">@item.Description</p>
 
                     <div class="d-flex justify-content-between mt-3">
                         <span class="badge bg-secondary">@item.Category</span>
-                        @if (item.IsAvailable){
+                        @if (item.IsAvailable)
+                        {
                             <span class="fw-bold text-success">@item.Price€</span>
                         }
                         else
                         {
                             <span class="fw-bold text-danger">AGOTADO</span>
                         }
-
                     </div>
                 </div>
+
 
                 <div class="card-footer bg-transparent border-0 d-flex justify-content-end gap-2">
                     <a asp-action="Edit" asp-route-id="@item.ItemId" class="btn btn-sm btn-outline-primary">

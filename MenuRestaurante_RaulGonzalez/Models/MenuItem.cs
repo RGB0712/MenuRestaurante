@@ -24,6 +24,9 @@ namespace MenuRestaurante_RaulGonzalez.Models
         public bool IsAvailable { get; set; }
 
         [DynamoDBProperty]
+        public bool IsFeatured { get; set; }
+
+        [DynamoDBProperty]
         public string? ImageKey { get; set; }
     }
 }

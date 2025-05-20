@@ -15,38 +15,51 @@
 
             <div class="form-floating mb-3">
                 <input asp-for="Name" class="form-control" placeholder="Nombre del plato" />
-                <label asp-for="Name"></label>
+                <label class="form-label" asp-for="Name">Nombre</label>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
             <div class="form-floating mb-3">
                 <textarea asp-for="Description" class="form-control" style="height: 100px" placeholder="Descripción"></textarea>
-                <label asp-for="Description"></label>
+                <label class="form-label" asp-for="Description">Descripci&oacute;n</label>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
             <div class="form-floating mb-3">
                 <input asp-for="Category" class="form-control" placeholder="Categoría" />
-                <label asp-for="Category"></label>
+                <label class="form-label" asp-for="Category">Categor&iacute;a</label>
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
 
             <div class="form-floating mb-3">
                 <input asp-for="Price" type="number" step="0.01" class="form-control" placeholder="Precio" />
-                <label asp-for="Price"></label>
+                <label class="form-label" asp-for="Price">Precio</label>
                 <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input asp-for="IsAvailable" class="form-check-input" />
+                <label asp-for="IsAvailable" class="form-check-label">Marcar como plato disponible</label>
+                <span asp-validation-for="IsAvailable" class="text-danger"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="IsFeatured" class="form-check-input" type="checkbox" />
+                <label class="form-check-label" asp-for="IsFeatured">
+                    <i class="bi bi-star-fill text-warning me-1"></i> Marcar como plato destacado
+                </label>
             </div>
 
             <div class="mb-3">
                 <label asp-for="ImageKey" class="form-label fw-bold">Imagen (clave de S3)</label>
                 <select asp-for="ImageKey" class="form-select" asp-items="ViewBag.ImageOptions">
-                    <option value="">Selecciona una imagen</option>
+                    <option value="">-- Selecciona una imagen --</option>
                 </select>
                 <span asp-validation-for="ImageKey" class="text-danger"></span>
             </div>
 
             <div class="d-flex justify-content-between mt-4">
-                <a asp-action="Index" class="btn btn-outline-secondary">
+                <a asp-action="Index" class="btn btn-outline-primary">
                     <i class="bi bi-arrow-left"></i> Cancelar
                 </a>
                 <button type="submit" class="btn btn-primary">
@@ -56,3 +69,4 @@
         </form>
     </div>
 </div>
+

@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\raulg\\Repositories\\Master\\Modulo06-AWS\\MenuRestaurante_RaulGonzalez\\MenuRestaurante_RaulGonzalez\\wwwroot\\images\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\images\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "C:\\Users\\raulg\\Repositories\\Master\\Modulo06-AWS\\MenuRestaurante_RaulGonzalez\\MenuRestaurante_RaulGonzalez\\wwwroot\\images\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\images\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "C:\\Users\\raulg\\Repositories\\Master\\Modulo06-AWS\\MenuRestaurante_RaulGonzalez\\MenuRestaurante_RaulGonzalez\\wwwroot\\images\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\images\\apple-touch-icon.png"
+    },
+    {
       "Id": "C:\\Users\\raulg\\Repositories\\Master\\Modulo06-AWS\\MenuRestaurante_RaulGonzalez\\MenuRestaurante_RaulGonzalez\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

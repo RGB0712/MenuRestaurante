@@ -12,17 +12,53 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 21:54:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/favicon.61n19gt1b8.ico">
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/favicon.4m04jfdpyb.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"61n19gt1b8"},{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="},{"Name":"label","Value":"_content/MenuRestaurante_RaulGonzalez/favicon.ico"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 21:54:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4m04jfdpyb"},{"Name":"integrity","Value":"sha256-5ITA\u002BywCbhb/KAkfj6Wyjeh2VORzfbCap6sNIIGSDok="},{"Name":"label","Value":"_content/MenuRestaurante_RaulGonzalez/favicon.ico"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15406"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u00225ITA\u002BywCbhb/KAkfj6Wyjeh2VORzfbCap6sNIIGSDok=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/favicon.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 21:54:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5ITA\u002BywCbhb/KAkfj6Wyjeh2VORzfbCap6sNIIGSDok="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"15406"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u00225ITA\u002BywCbhb/KAkfj6Wyjeh2VORzfbCap6sNIIGSDok=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/images/android-chrome-192x192.eko08kubvh.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\android-chrome-192x192.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"eko08kubvh"},{"Name":"integrity","Value":"sha256-ogt6fWhOjEb2DLnhMr3kP\u002B6TObhe9FC6y7zSRrW21co="},{"Name":"label","Value":"_content/MenuRestaurante_RaulGonzalez/images/android-chrome-192x192.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10506"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ogt6fWhOjEb2DLnhMr3kP\u002B6TObhe9FC6y7zSRrW21co=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/images/android-chrome-192x192.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\android-chrome-192x192.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ogt6fWhOjEb2DLnhMr3kP\u002B6TObhe9FC6y7zSRrW21co="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10506"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ogt6fWhOjEb2DLnhMr3kP\u002B6TObhe9FC6y7zSRrW21co=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/images/android-chrome-512x512.lgzxm9arah.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\android-chrome-512x512.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lgzxm9arah"},{"Name":"integrity","Value":"sha256-O9Resbmc6YDCm/szEu68diHX8kYQww7k9k9AiTQgyVI="},{"Name":"label","Value":"_content/MenuRestaurante_RaulGonzalez/images/android-chrome-512x512.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"27987"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022O9Resbmc6YDCm/szEu68diHX8kYQww7k9k9AiTQgyVI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/images/android-chrome-512x512.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\android-chrome-512x512.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-O9Resbmc6YDCm/szEu68diHX8kYQww7k9k9AiTQgyVI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"27987"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022O9Resbmc6YDCm/szEu68diHX8kYQww7k9k9AiTQgyVI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/images/apple-touch-icon.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\apple-touch-icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-p3VNVPpXNr8Cj/E7uAWuNZkMOXxQuHx7SHo\u002Bh/no87c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"9251"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022p3VNVPpXNr8Cj/E7uAWuNZkMOXxQuHx7SHo\u002Bh/no87c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/images/apple-touch-icon.r3yo7vrnoa.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\apple-touch-icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r3yo7vrnoa"},{"Name":"integrity","Value":"sha256-p3VNVPpXNr8Cj/E7uAWuNZkMOXxQuHx7SHo\u002Bh/no87c="},{"Name":"label","Value":"_content/MenuRestaurante_RaulGonzalez/images/apple-touch-icon.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9251"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022p3VNVPpXNr8Cj/E7uAWuNZkMOXxQuHx7SHo\u002Bh/no87c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 May 2025 17:28:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MenuRestaurante_RaulGonzalez/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
