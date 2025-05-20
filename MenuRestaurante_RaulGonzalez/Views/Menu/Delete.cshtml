@@ -1,0 +1,30 @@
+﻿@model MenuRestaurante_RaulGonzalez.Models.MenuItem
+
+@{
+    ViewData["Title"] = "Delete Dish";
+    string bucketUrl = "https://restaurant-menu-images.s3.amazonaws.com";
+}
+
+<h2 class="mb-4">Delete Dish</h2>
+
+<h4>Are you sure you want to delete this dish?</h4>
+
+<div class="card mb-4" style="max-width: 600px;">
+    @if (!string.IsNullOrEmpty(Model.ImageKey))
+    {
+        <img src="@($"{bucketUrl}/{Model.ImageKey}")" class="card-img-top" alt="@Model.Name" />
+    }
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <p><strong>Category:</strong> @Model.Category</p>
+        <p><strong>Price:</strong> $@Model.Price</p>
+        <p><strong>Available:</strong> @(Model.IsAvailable ? "Yes" : "No")</p>
+    </div>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="ItemId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,34 @@
+﻿@model MenuRestaurante_RaulGonzalez.Models.Reservation
+
+@{
+    ViewData["Title"] = "Make a Reservation";
+}
+
+<h2>Make a Reservation</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="DateOfReservation" class="form-label"></label>
+        <input asp-for="DateOfReservation" class="form-control" type="datetime-local" />
+        <span asp-validation-for="DateOfReservation" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NumberOfPeople" class="form-label"></label>
+        <input asp-for="NumberOfPeople" class="form-control" type="number" min="1" />
+        <span asp-validation-for="NumberOfPeople" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Notes" class="form-label"></label>
+        <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Notes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Confirm Reservation</button>
+    <a asp-controller="Menu" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

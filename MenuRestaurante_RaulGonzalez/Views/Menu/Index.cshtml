@@ -1,0 +1,37 @@
+﻿@model List<MenuRestaurante_RaulGonzalez.Models.MenuItem>
+
+@{
+    ViewData["Title"] = "Menu";
+    string bucketUrl = "https://restaurant-menu-images.s3.amazonaws.com";
+    var isAdmin = User.IsInRole("Admins");
+}
+
+<h2 class="mb-4">Menu</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                @if (!string.IsNullOrEmpty(item.ImageKey))
+                {
+                    <img src="@($"{bucketUrl}/{item.ImageKey}")" class="card-img-top" alt="@item.Name" />
+                }
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Description</p>
+                    <p><strong>Category:</strong> @item.Category</p>
+                    <p><strong>Price:</strong> $@item.Price</p>
+                    <p><strong>Available:</strong> @(item.IsAvailable ? "Yes" : "No")</p>
+                </div>
+                @if (isAdmin)
+                {
+                    <div class="card-footer d-flex justify-content-between">
+                        <a asp-action="Edit" asp-route-id="@item.ItemId" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.ItemId" class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
