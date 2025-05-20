@@ -1,0 +1,15 @@
+﻿version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+  build:
+    commands:
+      - dotnet restore
+      - dotnet publish -c Release -o output
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output
