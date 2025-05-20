@@ -1,12 +1,4 @@
-﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
-
-@{
-    var user = HttpContextAccessor.HttpContext?.User;
-    var isAuthenticated = user?.Identity?.IsAuthenticated ?? false;
-    var isAdmin = user?.IsInRole("Admins") ?? false;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -30,50 +22,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Menu" asp-action="Index">Menu</a>
                         </li>
-
-                        @if (isAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Reservation" asp-action="Create">Make Reservation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Reservation" asp-action="MyReservations">My Reservations</a>
-                            </li>
-                        }
-
-                        @if (isAdmin)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Menu" asp-action="Create">Create Dish</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Reservation" asp-action="All">All Reservations</a>
-                            </li>
-                        }
-
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Menu" asp-action="Create">Create Dish</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                    </ul>
-
-                    <ul class="navbar-nav">
-                        @if (isAuthenticated)
-                        {
-                            <li class="nav-item me-3 align-self-center">
-                                <span class="text-dark">Hello, @user!.Identity!.Name!</span>
-                            </li>
-                            <li class="nav-item">
-                                <form asp-controller="Account" asp-action="Logout" method="post">
-                                    <button type="submit" class="btn btn-outline-secondary">Logout</button>
-                                </form>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="btn btn-outline-primary" asp-controller="Account" asp-action="Login">Login / Register</a>
-                            </li>
-                        }
                     </ul>
                 </div>
             </div>

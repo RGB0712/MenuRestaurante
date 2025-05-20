@@ -44,18 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raulg/Repositories/Master/Modulo06-AWS/MenuRestaurante_RaulGonzalez/MenuRestaurante_RaulGonzalez/Views/Reservation/All.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cQWxsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/raulg/Repositories/Master/Modulo06-AWS/MenuRestaurante_RaulGonzalez/MenuRestaurante_RaulGonzalez/Views/Reservation/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/raulg/Repositories/Master/Modulo06-AWS/MenuRestaurante_RaulGonzalez/MenuRestaurante_RaulGonzalez/Views/Reservation/MyReservations.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cTXlSZXNlcnZhdGlvbnMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/raulg/Repositories/Master/Modulo06-AWS/MenuRestaurante_RaulGonzalez/MenuRestaurante_RaulGonzalez/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

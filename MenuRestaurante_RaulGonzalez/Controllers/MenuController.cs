@@ -1,60 +1,41 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using Amazon.DynamoDBv2.DataModel;
-using MenuRestaurante_RaulGonzalez.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Amazon.DynamoDBv2.DataModel;
 using Amazon.S3;
 using Amazon.S3.Model;
+using MenuRestaurante_RaulGonzalez.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
 
 namespace MenuRestaurante_RaulGonzalez.Controllers
 {
     public class MenuController : Controller
     {
-
-        // Variables privadas
         private readonly IDynamoDBContext _context;
         private readonly IAmazonS3 _s3Client;
-        private readonly string _bucketName = "restaurant-menu-images"; // Nombre del Bucket
-        private readonly string _imagePrefix = "menu/"; // Carpeta del bucket
+        private readonly string _bucketName;
+        private readonly string _imagePrefix = "menu/";
 
-        public MenuController(IDynamoDBContext context,IAmazonS3 s3Client)
+        public MenuController(IDynamoDBContext context, IAmazonS3 s3Client, IConfiguration config)
         {
             _context = context;
             _s3Client = s3Client;
+            _bucketName = config["AWS:S3BucketName"] ?? throw new ArgumentNullException("Missing S3 bucket config");
         }
 
-        // ================================
-        // PUBLIC VIEW
-        // GET: /Menu
-        // ================================
-        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var menuItems = await _context.ScanAsync<MenuItem>(new List<ScanCondition>()).GetRemainingAsync();
             return View(menuItems);
         }
 
-        // ================================
-        // CREATE
-        // GET: /Menu/Create
-        // ================================
-        [Authorize(Policy = "AdminOnly")]
-        public async Task<IActionResult> Create() 
+        public async Task<IActionResult> Create()
         {
             var imageKeys = await GetImageKeysFromS3Async(_imagePrefix);
             ViewBag.ImageOptions = new SelectList(imageKeys);
-            return View(); 
+            return View();
         }
 
-        // ================================
-        // CREATE
-        // POST: /Menu/Create
-        // ================================
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Create(MenuItem menuItem)
         {
             try
@@ -65,87 +46,53 @@ namespace MenuRestaurante_RaulGonzalez.Controllers
                     await _context.SaveAsync(menuItem);
                     return RedirectToAction(nameof(Index));
                 }
-                
-                // Volver a cargar imágenes si el modelo es inválido
+
                 var imageKeys = await GetImageKeysFromS3Async(_imagePrefix);
                 ViewBag.ImageOptions = new SelectList(imageKeys);
                 return View(menuItem);
-
             }
             catch (Exception ex)
             {
-                return View(ex.Message);
+                return View("Error", ex.Message);
             }
         }
 
-        // ================================
-        // EDIT
-        // GET: /Menu/Edit/{id}
-        // ================================
-        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Edit(string id)
         {
             var item = await _context.LoadAsync<MenuItem>(id);
             if (item == null) return NotFound();
 
             var imageKeys = await GetImageKeysFromS3Async(_imagePrefix);
-            ViewBag.ImageOptions = new SelectList(imageKeys, item.ImageKey); // ← valor preseleccionado
-
+            ViewBag.ImageOptions = new SelectList(imageKeys, item.ImageKey);
             return View(item);
         }
 
-        // ================================
-        // EDIT
-        // POST: /Menu/Edit/{id}
-        // ================================
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Edit(string id, MenuItem updatedItem)
         {
-            try
+            if (id != updatedItem.ItemId) return BadRequest();
+
+            if (ModelState.IsValid)
             {
-                if (id != updatedItem.ItemId) return BadRequest();
-
-                if (ModelState.IsValid)
-                {
-                    await _context.SaveAsync(updatedItem);
-                    return RedirectToAction(nameof(Index));
-                }
-
-                // Si algo falla, volver a cargar las imágenes para el select
-                var imageKeys = await GetImageKeysFromS3Async(_imagePrefix);
-                ViewBag.ImageOptions = new SelectList(imageKeys, updatedItem.ImageKey);
-
-                return View(updatedItem);
-            
-            }
-            catch (Exception ex)
-            {
-                return View(ex.Message);
+                await _context.SaveAsync(updatedItem);
+                return RedirectToAction(nameof(Index));
             }
 
+            var imageKeys = await GetImageKeysFromS3Async(_imagePrefix);
+            ViewBag.ImageOptions = new SelectList(imageKeys, updatedItem.ImageKey);
+            return View(updatedItem);
         }
 
-        // ================================
-        // DELETE
-        // GET: /Menu/Delete/{id}
-        // ================================
-        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Delete(string id)
         {
-            var item = await _context.LoadAsync(id);
+            var item = await _context.LoadAsync<MenuItem>(id);
             if (item == null) return NotFound();
             return View(item);
         }
 
-        // ================================
-        // DELETE
-        // POST: /Menu/Delete/{id}
-        // ================================
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             try
@@ -155,13 +102,10 @@ namespace MenuRestaurante_RaulGonzalez.Controllers
             }
             catch (Exception ex)
             {
-                return View(ex.Message);
+                return View("Error", ex.Message);
             }
         }
 
-        // ================================
-        // HELPER: Get image keys from S3
-        // ================================
         private async Task<List<string>> GetImageKeysFromS3Async(string prefix)
         {
             var keys = new List<string>();
@@ -172,7 +116,6 @@ namespace MenuRestaurante_RaulGonzalez.Controllers
             };
 
             var response = await _s3Client.ListObjectsV2Async(request);
-
             foreach (var obj in response.S3Objects)
             {
                 keys.Add(obj.Key);
@@ -180,6 +123,5 @@ namespace MenuRestaurante_RaulGonzalez.Controllers
 
             return keys;
         }
-
     }
 }

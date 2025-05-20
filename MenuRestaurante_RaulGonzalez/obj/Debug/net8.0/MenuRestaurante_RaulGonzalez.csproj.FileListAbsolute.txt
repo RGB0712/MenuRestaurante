@@ -241,3 +241,4 @@ C:\Users\raulg\Repositories\Master\Modulo06-AWS\MenuRestaurante_RaulGonzalez\Men
 C:\Users\raulg\Repositories\Master\Modulo06-AWS\MenuRestaurante_RaulGonzalez\MenuRestaurante_RaulGonzalez\obj\Debug\net8.0\MenuRestaurante_RaulGonzalez.pdb
 C:\Users\raulg\Repositories\Master\Modulo06-AWS\MenuRestaurante_RaulGonzalez\MenuRestaurante_RaulGonzalez\obj\Debug\net8.0\MenuRestaurante_RaulGonzalez.genruntimeconfig.cache
 C:\Users\raulg\Repositories\Master\Modulo06-AWS\MenuRestaurante_RaulGonzalez\MenuRestaurante_RaulGonzalez\obj\Debug\net8.0\ref\MenuRestaurante_RaulGonzalez.dll
+C:\Users\raulg\Repositories\Master\Modulo06-AWS\MenuRestaurante_RaulGonzalez\MenuRestaurante_RaulGonzalez\obj\Debug\net8.0\MenuRestaurante_RaulGonzalez.sourcelink.json
