@@ -91,7 +91,7 @@ namespace MenuRestaurante_RaulGonzalez.Controllers
             return View(item);
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
