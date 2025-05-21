@@ -29,7 +29,7 @@
 
             <div class="card-footer bg-white border-top-0">
                 <form asp-action="DeleteConfirmed" method="post">
-                    <input type="hidden" asp-for="ItemId" />
+                    <input type="hidden" name="id" value="@Model.ItemId" />
 
                     <div class="alert alert-warning text-center mt-3" role="alert">
                         ¿Estás seguro de que deseas eliminar este plato?

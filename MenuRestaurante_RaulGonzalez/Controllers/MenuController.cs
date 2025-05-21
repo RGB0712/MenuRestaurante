@@ -97,7 +97,9 @@ namespace MenuRestaurante_RaulGonzalez.Controllers
         {
             try
             {
+                Console.WriteLine(id);
                 await _context.DeleteAsync<MenuItem>(id);
+                
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
